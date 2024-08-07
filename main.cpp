@@ -4,7 +4,27 @@ using namespace std;
 const int SIZE = 10;
 int numbers[SIZE] = {5, 2, 9, 1, 5, 6, 3, 2, 7, 8};
 
+int ValorMax(){
+        // Encontrar el valor máximo
+    int maxVal = numbers[0];
+    for (int i = 1; i < SIZE; i++) {
+        if (numbers[i] > maxVal) {
+            maxVal = numbers[i];
+        }
+    }
+    cout << "Valor máximo: " << maxVal << endl;
+}
 
+int ValorMin(){
+    // Encontrar el valor mínimo
+    int minVal = numbers[0];
+    for (int i = 1; i < SIZE; i++) {
+        if (numbers[i] < minVal) {
+            minVal = numbers[i];
+        }
+    }
+    cout << "Valor mínimo: " << minVal << endl;
+}
 
 
 int main() {
@@ -41,23 +61,8 @@ int main() {
     }
     cout << endl;
 
-    // Encontrar el valor máximo
-    int maxVal = numbers[0];
-    for (int i = 1; i < SIZE; i++) {
-        if (numbers[i] > maxVal) {
-            maxVal = numbers[i];
-        }
-    }
-    cout << "Valor máximo: " << maxVal << endl;
-
-    // Encontrar el valor mínimo
-    int minVal = numbers[0];
-    for (int i = 1; i < SIZE; i++) {
-        if (numbers[i] < minVal) {
-            minVal = numbers[i];
-        }
-    }
-    cout << "Valor mínimo: " << minVal << endl;
+    ValorMax();
+    ValorMin();
 
     // Calcular el promedio
     int sum = 0;
